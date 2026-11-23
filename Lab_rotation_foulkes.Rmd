@@ -1,0 +1,29 @@
+---
+title: "Lab Rotation Report"
+subtitle: "Exploring an Alternative Cryofixation Method for Electron Microscopy in _Platynereis dumerilii_"
+author: "Vera Götz"
+date: "`r Sys.Date()`"
+mainfont: "Calibri"
+fontsize: 11pt
+linestretch: 1.5
+header-includes:
+  - \renewcommand{\arraystretch}{1.2}
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(kableExtra)
+```
+
+# Introduction
+
+# Results
+
+# Discussion 
+
+# Materials and Methods
