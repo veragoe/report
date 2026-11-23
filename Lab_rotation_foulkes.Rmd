@@ -54,13 +54,13 @@ tools <- data.frame(
 
 kable(tools, booktabs = TRUE) %>%
   kable_styling(full_width = TRUE) %>%
-  column_spec(1, width = "6.77cm") %>%
-  column_spec(2, width = "3.39cm")
-  column_spec(3, width = "5.08cm")
+  column_spec(1, width = "7.3cm") %>%
+  column_spec(2, width = "3.33cm") %>%
+  column_spec(3, width = "4.58cm")
 ```
 
 ### Antibodies 
-```{r primary-antibodies-table}                 
+```{r antibodies-table}                 
 P_antibodies <- data.frame(
   Antigen = c("α-COX1", "α-actin", "α-vinculin", "α-mouse"),
   Host = c("Mouse", "Mouse", "Mouse", "Goat"),
@@ -76,6 +76,20 @@ kable(P_antibodies, booktabs = TRUE) %>%
 
 ```
 
+### Medaka lines
+```{r medaka-table}
+medaka <- data.frame(
+  Genotype = c("iCAB", "CPD KO"),
+  Discription = c("wildtype", "CPD knock out")
+)
+
+kable(medaka, booktabs = TRUE) %>%
+  kable_styling(full_width = TRUE) %>%
+  column_spec(1, width = "4.8cm") %>%
+  column_spec(2, width = "10.8cm")
+```
+
 ## Methods 
 
 ### SDS-Page and Western Blot 
+In order to prepare samples for SDS-Page and subsequent Western blot, Laemmli buffer (2x) was added to the frozen or fresh tissue and homogenized by crushing with a pestle.Then, the samples were boiled at 95°C for 5 minutes. Thereafter the sample could be stored at -20°C until use. For the SDS-Page gel, 8 mL stacking and 20 mL resolving gel were prepared (= 2 gels) and poured into the prepared glass chambers with resolving gel on the bottom and stacking gel on the top. To obtain a clean edge, the resolving gel was covered with water while polymerizing, then the water was removed, the stacking gel was added and a 10 well comb inserted.
