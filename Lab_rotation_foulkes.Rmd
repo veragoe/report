@@ -1,6 +1,6 @@
 ---
 title: "Lab Rotation Report"
-subtitle: "Exploring an Alternative Cryofixation Method for Electron Microscopy in _Platynereis dumerilii_"
+subtitle: "Foulks lab"
 author: "Vera Götz"
 date: "`r Sys.Date()`"
 mainfont: "Calibri"
@@ -27,3 +27,53 @@ library(kableExtra)
 # Discussion 
 
 # Materials and Methods
+
+## Materials
+
+### Buffers and Solutions
+```{r buffers-table}
+buffers <- data.frame(
+  Name = c("Laemmli 1x", "Tris Glycin 10x", "Running buffer", "Transfer buffer", "TBS 10x, pH 7.6", "TBST (Wash buffer)", "Blocking buffer", "Stacking gel", "Resolving gel"),
+  Composition = c("63 mM Tris-HCl, 10% Glycerol, 2% SDS, 0.0025% Bromophenol Blue, 5% β-Mercaptoethanol", "250 mM Tris base, 1900 mM Glycine", "1x Tris Glycine, 0.1% SDS", "1x Tris Glycine, 20% Methanol", "200 mM Tris-HCl, 1.37 M NaCl", "1x TBS, 0.1% Tween 20", "1x TBST, 5% no fat milk", "30% Acrylamide-mix, 1.5 M Tris (ph 8.8), 10% SDS, 10% APS, 0.04% TEMED, in H₂O", "30% Acrylamide-mix, 1.0 M Tris (ph 6.8), 10% SDS, 10% APS, 0.1% TEMED, in H₂O")
+)
+
+kable(buffers, booktabs = TRUE) %>%
+  kable_styling(full_width = TRUE) %>%
+  column_spec(1, width = "6.8cm") %>%
+  column_spec(2, width = "8.8cm")
+```
+
+### Kits and devices
+```{r tools-table}
+tools <- data.frame(
+  Name = c("Mini-PROTEAN® Tetra Vertical Electrophoresis Cell, 2-gel, for 1.5 mm thick handcast gels", "Mini-PROTEAN® Vertical Electrophoresis Cell, 4-gel, for Mini Precast Gels with Mini Trans-Blot® Module", "Clarity Western ECL Substrate, 500 ml"),
+  Model = c("#1658007FC", "#1658030", "#1705061"),
+  Company = c("Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc."),
+  check.names = FALSE
+)
+
+kable(tools, booktabs = TRUE) %>%
+  kable_styling(full_width = TRUE) %>%
+  column_spec(1:3, width = "5.08cm")
+```
+
+### Antibodies 
+```{r primary-antibodies-table}                 
+P_antibodies <- data.frame(
+  Antigen = c("α-tubulin", "α-serotonin"),
+  Host = c("Mouse", "Rabbit"),
+  Company = c("Sigma-Aldrich (MERCK)", "Sigma-Aldrich (MERCK)"),
+  'Product Number' = c("T6793", "S5545"),
+  Dilution = c("1:400", "1:400"),
+  check.names = FALSE
+)
+
+kable(P_antibodies, booktabs = TRUE) %>%
+  kable_styling(full_width = TRUE) %>%
+  column_spec(1:5, width = "2.88cm")
+
+```
+
+## Methods 
+
+### SDS-Page and Western Blot 
