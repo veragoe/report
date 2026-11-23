@@ -34,7 +34,7 @@ library(kableExtra)
 ```{r buffers-table}
 buffers <- data.frame(
   Name = c("Laemmli 1x", "Tris Glycin 10x", "Running buffer", "Transfer buffer", "TBS 10x, pH 7.6", "TBST (Wash buffer)", "Blocking buffer", "Stacking gel", "Resolving gel"),
-  Composition = c("63 mM Tris-HCl, 10% Glycerol, 2% SDS, 0.0025% Bromophenol Blue, 5% β-Mercaptoethanol", "250 mM Tris base, 1900 mM Glycine", "1x Tris Glycine, 0.1% SDS", "1x Tris Glycine, 20% Methanol", "200 mM Tris-HCl, 1.37 M NaCl", "1x TBS, 0.1% Tween 20", "1x TBST, 5% no fat milk", "30% Acrylamide-mix, 1.5 M Tris (ph 8.8), 10% SDS, 10% APS, 0.04% TEMED, in H₂O", "30% Acrylamide-mix, 1.0 M Tris (ph 6.8), 10% SDS, 10% APS, 0.1% TEMED, in H₂O")
+  Composition = c("63 mM Tris-HCl, 10% Glycerol, 2% SDS, 0.0025% Bromophenol Blue, 5% β-Mercaptoethanol", "250 mM Tris base, 1900 mM Glycine", "1x Tris Glycine, 0.1% SDS", "1x Tris Glycine, 20% Methanol", "200 mM Tris-HCl, 1.37 M NaCl", "1x TBS, 0.1% Tween 20", "1x TBST, 5% no fat milk", "30% Acrylamide-mix, 1.0 M Tris (ph 6.8), 10% SDS, 10% APS, 0.04% TEMED, in H₂O", "30% Acrylamide-mix, 1.5 M Tris (ph 8.8), 10% SDS, 10% APS, 0.1% TEMED, in H₂O")
 )
 
 kable(buffers, booktabs = TRUE) %>%
@@ -54,17 +54,19 @@ tools <- data.frame(
 
 kable(tools, booktabs = TRUE) %>%
   kable_styling(full_width = TRUE) %>%
-  column_spec(1:3, width = "5.08cm")
+  column_spec(1, width = "6.77cm") %>%
+  column_spec(2, width = "3.39cm")
+  column_spec(3, width = "5.08cm")
 ```
 
 ### Antibodies 
 ```{r primary-antibodies-table}                 
 P_antibodies <- data.frame(
-  Antigen = c("α-tubulin", "α-serotonin"),
-  Host = c("Mouse", "Rabbit"),
-  Company = c("Sigma-Aldrich (MERCK)", "Sigma-Aldrich (MERCK)"),
-  'Product Number' = c("T6793", "S5545"),
-  Dilution = c("1:400", "1:400"),
+  Antigen = c("α-COX1", "α-actin", "α-vinculin", "α-mouse"),
+  Host = c("Mouse", "Mouse", "Mouse", "Goat"),
+  Company = c("", "", "", ""),
+  'Product Number' = c("", "", "", ""),
+  Dilution = c("1:1000", "1:5000", "1:1000", "1:7500"),
   check.names = FALSE
 )
 
