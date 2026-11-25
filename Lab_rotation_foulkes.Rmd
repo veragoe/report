@@ -130,4 +130,5 @@ The western blots were analysed using Image Lab and Fiji.
 ### Fish handeling
 
 ### Cell culture
-Frozen 3T3 cells were thawed and transferred into a 15 mL Falcon tube for subsequent centrifugation at 1075 rpm for 4 minutes. Afterwards, the freezing medium was carefully removed without disrupting the pellet, and the cells were resuspended in 5 mL cell culture medium. Then, the cell suspension was transferred into a T75 flask, an additional 5 mL cell culture medium was added and the flask was placed in an incubator at 37 °C. After a few hours, once the cells had attached to the bottom of the flask, the medium was replaced with fresh medium to remove any DMSO residues and dead cells. 
+Frozen 3T3 cells were thawed and transferred into a 15 mL Falcon tube for subsequent centrifugation at 1075 rpm for 4 minutes. Afterwards, the freezing medium was carefully removed without disrupting the pellet, and the cells were resuspended in 5 mL cell culture medium. Then, the cell suspension was transferred into a T75 flask, an additional 5 mL cell culture medium was added and the flask was placed in an incubator at 37 °C. After a few hours, once the cells had attached to the bottom of the flask, the medium was replaced with fresh medium to remove any DMSO residues and dead cells. \
+Splitting was done as soon as cells grew beyond 90% of the flask...
