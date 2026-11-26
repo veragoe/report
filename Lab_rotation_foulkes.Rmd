@@ -10,6 +10,9 @@ header-includes:
   - \renewcommand{\arraystretch}{1.2}
   - \usepackage{caption}
   - \captionsetup{labelfont=bf, labelsep=period}
+  - \usepackage{float}
+  - \usepackage{etoolbox}
+  - \AtBeginEnvironment{tabu}{\setstretch{1}}
 output:
   pdf_document:
     toc: true
@@ -30,11 +33,23 @@ library(kableExtra)
 
 
 # Results
-```{r western-blot, out.width="60%", fig.align="center", fig.cap=wb_legend, fig.scap="Western blot of Cox1"}
-wb_legend <- "\\textbf{The anti-Cox1 antibody is suitable for Western blot of medaka fin lysates.} Western blots of fin lysates from iCab and CPD KO (n = 3 each), probed with anti-actin (upper panel) and anti-Cox1 (lower panel) antibodies. Molecular weight markers are indicated on the left."
+```{r western-blot, out.width="60%", fig.align="center", fig.pos="H", fig.cap=wb_legend, fig.scap="Western blot of Cox1"}
+wb_legend <- "\\textbf{The anti-Cox1 antibody is suitable for Western blot in medaka.}
+Western blots of fin lysates from iCab and CPD KO medaka (n = 3 each), probed with
+anti-actin (upper panel) and anti-Cox1 (lower panel) antibodies. Molecular weight
+markers are indicated on the left. Actin, serving as loading control, shows bands of
+similar intensity in all samples. The anti-Cox1 antibody detects a band at
+approximately 37 kDa in all samples. Variation in Cox1 band intensity, including
+saturated CPD KO bands, is likely due to sample overloading, as a lower input
+(10 µl) resulted in stronger bands (data not shown). Band intensities therefore do
+not reflect Cox1 protein levels. Sample input: 40 µl."
 
 knitr::include_graphics("figures/Western Blot 19_11_2026 Actin Cox1.png")
 ```
+
+- company confirms lower band in mouse wb 
+- protein size in medaka around 57?? i think
+
 
 # Discussion 
 
@@ -51,8 +66,8 @@ buffers <- data.frame(
 
 kable(buffers, booktabs = TRUE) %>%
   kable_styling(full_width = TRUE) %>%
-  column_spec(1, width = "6.8cm") %>%
-  column_spec(2, width = "8.8cm")
+  column_spec(1, width = "4.8cm") %>%
+  column_spec(2, width = "10.8cm")
 ```
 
 ### Kits and devices
