@@ -12,7 +12,7 @@ header-includes:
   - \captionsetup{labelfont=bf, labelsep=period}
   - \usepackage{float}
   - \usepackage{etoolbox}
-  - \AtBeginEnvironment{tabu}{\setstretch{1}}
+  - \AtBeginEnvironment{tabularx}{\setstretch{1}}
 output:
   pdf_document:
     toc: true
