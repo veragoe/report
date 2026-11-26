@@ -8,6 +8,8 @@ fontsize: 11pt
 linestretch: 1.5
 header-includes:
   - \renewcommand{\arraystretch}{1.2}
+  - \usepackage{caption}
+  - \captionsetup{labelfont=bf, labelsep=period}
 output:
   pdf_document:
     toc: true
@@ -56,9 +58,9 @@ kable(buffers, booktabs = TRUE) %>%
 ### Kits and devices
 ```{r tools-table}
 tools <- data.frame(
-  Name = c("Mini-PROTEAN® Tetra Vertical Electrophoresis Cell, 2-gel, for 1.5 mm thick handcast gels", "Mini-PROTEAN® Vertical Electrophoresis Cell, 4-gel, for Mini Precast Gels with Mini Trans-Blot® Module", "Clarity Western ECL Substrate, 500 ml", "ChemiDoc MP Imaging System With Image Lab Touch Software", "Immobilon®-P PVDF Membrane", "Color Prestained Protein Standard, Broad Range (10-250 kDa)", "Gibco™ DMEM (1x), high glucose, pyruvate", "Penicillin-Streptomycin (10.000 U/ml)", "Gibco™ Fetal Bovine Serum, Value", "Gibco™ DPBS, no calcium, no magnesium"),
-  Model = c("#1658007FC", "#1658030", "#1705061", "12018025", "IPVH00010", "P7719SVIAL", "41966029", "15140122", "A5256701", "14190094"),
-  Company = c("Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Merck KGaA", "New England Biolabs", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc."),
+  Name = c("Mini-PROTEAN® Tetra Vertical Electrophoresis Cell, 2-gel, for 1.5 mm thick handcast gels", "Mini-PROTEAN® Vertical Electrophoresis Cell, 4-gel, for Mini Precast Gels with Mini Trans-Blot® Module", "Clarity Western ECL Substrate, 500 ml", "ChemiDoc MP Imaging System With Image Lab Touch Software", "Immobilon®-P PVDF Membrane", "Color Prestained Protein Standard, Broad Range (10-250 kDa)", "Gibco™ DMEM (1x), high glucose, pyruvate", "Penicillin-Streptomycin (10.000 U/ml)", "Gibco™ Fetal Bovine Serum, Value", "Gibco™ DPBS, no calcium, no magnesium", "Gibco™ Trypsin-EDTA (0.05%), phenol red"),
+  Model = c("#1658007FC", "#1658030", "#1705061", "12018025", "IPVH00010", "P7719SVIAL", "41966029", "15140122", "A5256701", "14190094", "25300054"),
+  Company = c("Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Merck KGaA", "New England Biolabs", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc."),
   check.names = FALSE
 )
 
@@ -83,7 +85,9 @@ P_antibodies <- data.frame(
 
 kable(P_antibodies, booktabs = TRUE) %>%
   kable_styling(full_width = TRUE) %>%
-  column_spec(1:5, width = "2.88cm")
+  column_spec(1, width = "3.28cm") %>%
+  column_spec(2:4, width = "2.88cm") %>%
+  column_spec(5, width = "2.48cm")
 
 ```
 
@@ -120,7 +124,7 @@ kable(cells, booktabs = TRUE) %>%
 
 ### SDS-PAGE and Western Blot 
 **SDS-PAGE**\
-In order to prepare samples for SDS-PAGE and subsequent Western blot, Laemmli buffer (2x) was added to the frozen or fresh tissue and the tissue was homogenized by crushing with a pestle. Then, the samples were boiled at 95 °C for 5 minutes. Thereafter, the samples can be stored at −20 °C until use. For the SDS-PAGE gel, 8 mL stacking and 20 mL resolving gel were prepared (= 2 gels) and poured into the prepared gel cassette with resolving gel on the bottom and stacking gel on the top. To obtain a clean edge, the resolving gel was covered with water while polymerizing, then the water was removed, the stacking gel was added and a 10-well comb was inserted. To run the gel, the chamber was filled with running buffer, and subsequently the comb was removed and the wells were quickly rinsed to remove any residues. Thereafter, the samples and marker (Color Prestained Protein Standard) were loaded. During the stacking gel phase, the gel was run at 80 V, and after the samples entered the resolving gel, the voltage was increased to 100 V until completion. \ 
+In order to prepare samples for SDS-PAGE and subsequent Western blot, Laemmli buffer (2x) was added to the frozen or fresh tissue and the tissue was homogenized by crushing with a pestle. Then, the samples were boiled at 95 °C for 5 minutes. Thereafter, the samples can be stored at −20 °C until use. For the SDS-PAGE gel, 8 mL stacking and 20 mL resolving gel were prepared (= 2 gels) and poured into the prepared gel cassette with resolving gel on the bottom and stacking gel on the top. To obtain a clean edge, the resolving gel was covered with water while polymerizing, then the water was removed, the stacking gel was added and a 10-well comb was inserted. To run the gel, the chamber was filled with running buffer, and subsequently the comb was removed and the wells were quickly rinsed to remove any residues. Thereafter, the samples and marker (Color Prestained Protein Standard) were loaded. During the stacking gel phase, the gel was run at 80 V, and after the samples entered the resolving gel, the voltage was increased to 100 V until completion.\
 **Western blot**\
 For the subsequent Western blot to transfer the proteins to a membrane (PVDF), an electro-blotting cassette was assembled. For this, the membrane was first activated by briefly placing it in 100% methanol, rinsing it with H₂O and subsequently placing it in transfer buffer to equilibrate. The sponges and Whatman paper were also placed in transfer buffer. The electro-blotting cassette was assembled in the following way: sponge, two sheets of Whatman paper, SDS-PAGE gel, membrane, two sheets of Whatman paper, sponge. The membrane was placed on the anode side of the gel to ensure transfer of the proteins towards the membrane. The transfer was performed at 100 V for 1 hour, with the chamber being placed on ice for cooling. Afterwards, the membrane was placed for 1 hour in blocking solution to prevent non-specific background binding. For subsequent antibody incubation overnight at 4 °C, the membrane was placed in a foil, 5 mL blocking solution containing primary antibody was added, and the foil was sealed with as little air as possible. Thereafter, the membrane was washed thrice for 7 minutes with TBST before being incubated with secondary antibody in blocking solution for 1 hour at room temperature. Then, the membrane was again washed twice for 10 minutes with TBST and once for 10 minutes with TBS at room temperature. All previous incubations and washes were performed in oscillation. For development of the chemiluminescence detection, the substrate working solution (ECL) was prepared by mixing equal parts of detection reagents 1 and 2, immediately added onto the membrane and incubated for 1 minute at room temperature in light. Afterwards, the membrane was placed in a foil and the excess liquid as well as air bubbles were carefully removed. For imaging, the membrane was placed in a ChemiDoc MP Imaging System.
 
@@ -131,4 +135,4 @@ The western blots were analysed using Image Lab and Fiji.
 
 ### Cell culture
 Frozen 3T3 cells were thawed and transferred into a 15 mL Falcon tube for subsequent centrifugation at 1075 rpm for 4 minutes. Afterwards, the freezing medium was carefully removed without disrupting the pellet, and the cells were resuspended in 5 mL cell culture medium. Then, the cell suspension was transferred into a T75 flask, an additional 5 mL cell culture medium was added and the flask was placed in an incubator at 37 °C. After a few hours, once the cells had attached to the bottom of the flask, the medium was replaced with fresh medium to remove any DMSO residues and dead cells. \
-Splitting was done as soon as cells grew beyond 90% of the flask...
+Cells were split as soon as they reached 90% confluency. For this, the old medium was removed and the cells were washed twice with DPBS before adding 1 mL trypsin-EDTA for detachment. Once the cells had detached, they were resuspended in 10 mL cell culture medium, and 5 mL each were transferred into two T150 flasks containing 25 mL of additional cell culture medium, yielding a total volume of 30 mL per flask for further expansion.
