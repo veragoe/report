@@ -29,6 +29,13 @@ include-before: |
   \textbf{Supervisor:} Name\par
   \textbf{Foulkes Group, Institution}\par
   \end{titlepage}
+  ```
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+    latex_engine: xelatex
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
