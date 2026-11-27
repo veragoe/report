@@ -13,21 +13,26 @@ include-before: |
   ```{=latex}
   \begin{titlepage}
   \centering
-  \vspace*{5cm}
+  \vspace*{\fill}
 
   {\Large Focus II Lab report:\par}
-  \vspace{0.4cm}
-  {\LARGE\bfseries Investigating Mitochondrial Function\\ in CPD Knockout Medaka\par}
+  \vspace{0.8cm}
+  {\Huge\bfseries Investigating Mitochondrial Function\\ in CPD Knockout Medaka\par}
 
-  \vfill
+  \vspace{2.5cm}
 
-  \raggedright
-  \small
+  {\normalsize
   \textbf{Name:} Vera Lina Götz\par
   \textbf{Matriculation number:} 4225867\par
-  \textbf{Duration of practical:} November 16\textsuperscript{rd} -- December 23\textsuperscript{th}, 2026\par
+  \textbf{Duration of practical:} November 16\textsuperscript{th} -- December 23\textsuperscript{rd}, 2026\par
   \textbf{Supervisor:} Dr. Daniela Vallone\par
-  \textbf{Foulkes Group, Karlsruhe Institute of Technology (KIT) - Institute of Biological and Chemical Systems (IBCS)}\par
+  \vspace{0.5cm}
+  \textbf{Foulkes Group}\par
+  Karlsruhe Institute of Technology (KIT)\par
+  Institute of Biological and Chemical Systems (IBCS)\par
+  }
+
+  \vspace*{\fill}
   \end{titlepage}
   ```
 output:
