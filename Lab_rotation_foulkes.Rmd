@@ -16,7 +16,7 @@ include-before: |
   \vspace*{\fill}
 
   {\Large Focus II Lab report:\par}
-  \vspace{0.8cm}
+  \vspace{0.5cm}
   {\Huge\bfseries Investigating Mitochondrial Function\\ in CPD Knockout Medaka\par}
 
   \vspace{2.5cm}
@@ -29,7 +29,7 @@ include-before: |
   \vspace{0.5cm}
   \textbf{Foulkes Group}\par
   Karlsruhe Institute of Technology (KIT)\par
-  Institute of Biological and Chemical Systems (IBCS)\par
+  Institute of Biological and Chemical Systems (IBCS) - Biological Information Processing (BIP)\par
   }
 
   \vspace*{\fill}
@@ -70,7 +70,7 @@ knitr::include_graphics("figures/Western Blot 19_11_2026 Actin Cox1.png")
 ```
 
 - company confirms lower band in mouse wb 
-- protein size in medaka around 57?? i think
+- protein size in medaka around 57
 
 
 # Discussion 
@@ -92,22 +92,37 @@ kable(buffers, booktabs = TRUE) %>%
   column_spec(2, width = "10.8cm")
 ```
 
-### Kits and devices
-```{r tools-table}
-tools <- data.frame(
-  Name = c("Mini-PROTEAN® Tetra Vertical Electrophoresis Cell, 2-gel, for 1.5 mm thick handcast gels", "Mini-PROTEAN® Vertical Electrophoresis Cell, 4-gel, for Mini Precast Gels with Mini Trans-Blot® Module", "Clarity Western ECL Substrate, 500 ml", "ChemiDoc MP Imaging System With Image Lab Touch Software", "Immobilon®-P PVDF Membrane", "Color Prestained Protein Standard, Broad Range (10-250 kDa)", "Gibco™ DMEM (1x), high glucose, pyruvate", "Penicillin-Streptomycin (10.000 U/ml)", "Gibco™ Fetal Bovine Serum, Value", "Gibco™ DPBS, no calcium, no magnesium", "Gibco™ Trypsin-EDTA (0.05%), phenol red"),
-  Model = c("#1658007FC", "#1658030", "#1705061", "12018025", "IPVH00010", "P7719SVIAL", "41966029", "15140122", "A5256701", "14190094", "25300054"),
-  Company = c("Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Merck KGaA", "New England Biolabs", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc."),
+### Reagents
+```{r reagents-table}
+reagents <- data.frame(
+  Name = c("Clarity Western ECL Substrate, 500 ml", "Color Prestained Protein Standard, Broad Range (10-250 kDa)", "Gibco™ DMEM (1x), high glucose, pyruvate", "Penicillin-Streptomycin (10.000 U/ml)", "Gibco™ Fetal Bovine Serum, Value", "Gibco™ DPBS, no calcium, no magnesium", "Gibco™ Trypsin-EDTA (0.05%), phenol red", "Dimethyl sulphoxide (DMSO)"),
+  'Article number' = c("1705061", "P7719SVIAL", "41966029", "15140122", "A5256701", "14190094", "25300054", "A994.2"),
+  Company = c("Bio-Rad Laboratories, Inc.", "New England Biolabs", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Thermo Fisher Scientific Inc.", "Carl Roth GmbH + Co. KG"),
   check.names = FALSE
 )
 
-kable(tools, booktabs = TRUE) %>%
+kable(reagents, booktabs = TRUE) %>%
   kable_styling(full_width = TRUE) %>%
   column_spec(1, width = "7.3cm") %>%
   column_spec(2, width = "3.33cm") %>%
   column_spec(3, width = "4.58cm")
 ```
 
+### Equipment and consumables
+```{r devices-table}
+devices <- data.frame(
+  Name = c("Mini-PROTEAN® Tetra Vertical Electrophoresis Cell, 2-gel, for 1.5 mm thick handcast gels", "Mini-PROTEAN® Vertical Electrophoresis Cell, 4-gel, for Mini Precast Gels with Mini Trans-Blot® Module", "ChemiDoc MP Imaging System With Image Lab Touch Software", "Immobilon®-P PVDF Membrane"),
+  Model = c("1658007FC", "1658030", "12018025", "IPVH00010"),
+  Company = c("Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Bio-Rad Laboratories, Inc.", "Merck KGaA"),
+  check.names = FALSE
+)
+
+kable(devices, booktabs = TRUE) %>%
+  kable_styling(full_width = TRUE) %>%
+  column_spec(1, width = "7.3cm") %>%
+  column_spec(2, width = "3.33cm") %>%
+  column_spec(3, width = "4.58cm")
+```
 
 ### Antibodies 
 ```{r antibodies-table}                 
@@ -168,7 +183,8 @@ For the subsequent Western blot to transfer the proteins to a membrane (PVDF), a
 ### Image analysis
 The western blots were analysed using Image Lab and Fiji. 
 
-### Fish handeling
+### Fish husbandry 
+Medaka (_Oryzias latipes_) were bred and maintained by the medaka fish facility of the IBCS-BIP. For embryo collection, eggs were obtained from adult fish, transferred into Petri dishes containing embryo rearing medium (ERM) and incubated at 26 °C until hatching. Thereafter, freshly hatched larvae were either prepared for electron microscopy (EM) or lysed for Western blot.
 
 ### Cell culture
 Frozen 3T3 cells were thawed and transferred into a 15 mL Falcon tube for subsequent centrifugation at 1075 rpm for 4 minutes. Afterwards, the freezing medium was carefully removed without disrupting the pellet, and the cells were resuspended in 5 mL cell culture medium. Then, the cell suspension was transferred into a T75 flask, an additional 5 mL cell culture medium was added and the flask was placed in an incubator at 37 °C. After a few hours, once the cells had attached to the bottom of the flask, the medium was replaced with fresh medium to remove any DMSO residues and dead cells. \
