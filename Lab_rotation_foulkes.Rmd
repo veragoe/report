@@ -15,7 +15,7 @@ include-before: |
   \centering
   \vspace*{5cm}
 
-  {\Large Lab report:\par}
+  {\Large Focus II Lab report:\par}
   \vspace{0.4cm}
   {\LARGE\bfseries Investigating Mitochondrial Function\\ in CPD Knockout Medaka\par}
 
@@ -25,9 +25,9 @@ include-before: |
   \small
   \textbf{Name:} Vera Lina Götz\par
   \textbf{Matriculation number:} 4225867\par
-  \textbf{Duration of practical:} November 3\textsuperscript{rd} -- November 28\textsuperscript{th}, 2026\par
-  \textbf{Supervisor:} Name\par
-  \textbf{Foulkes Group, Institution}\par
+  \textbf{Duration of practical:} November 16\textsuperscript{rd} -- December 23\textsuperscript{th}, 2026\par
+  \textbf{Supervisor:} Dr. Daniela Vallone\par
+  \textbf{Foulkes Group, Karlsruhe Institute of Technology (KIT) - Institute of Biological and Chemical Systems (IBCS)}\par
   \end{titlepage}
   ```
 output:
