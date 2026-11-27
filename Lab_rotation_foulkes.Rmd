@@ -1,24 +1,34 @@
 ---
-title: "Lab Rotation Report"
-subtitle: "Foulks lab"
-author: "Vera Götz"
-date: "`r Sys.Date()`"
 mainfont: "Calibri"
 fontsize: 11pt
 linestretch: 1.5
 header-includes:
-  - \renewcommand{\arraystretch}{1.2}
+  - \renewcommand{\arraystretch}{1.6}
   - \usepackage{caption}
   - \captionsetup{labelfont=bf, labelsep=period}
   - \usepackage{float}
   - \usepackage{etoolbox}
-  - \AtBeginEnvironment{tabularx}{\setstretch{1}}
-output:
-  pdf_document:
-    toc: true
-    number_sections: true
-    latex_engine: xelatex
----
+  - \AtBeginEnvironment{longtabu}{\setstretch{1}}
+include-before: |
+  ```{=latex}
+  \begin{titlepage}
+  \centering
+  \vspace*{5cm}
+
+  {\Large Lab report:\par}
+  \vspace{0.4cm}
+  {\LARGE\bfseries Investigating Mitochondrial Function\\ in CPD Knockout Medaka\par}
+
+  \vfill
+
+  \raggedright
+  \small
+  \textbf{Name:} Vera Lina Götz\par
+  \textbf{Matriculation number:} 4225867\par
+  \textbf{Duration of practical:} November 3\textsuperscript{rd} -- November 28\textsuperscript{th}, 2026\par
+  \textbf{Supervisor:} Name\par
+  \textbf{Foulkes Group, Institution}\par
+  \end{titlepage}
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -110,8 +120,8 @@ kable(P_antibodies, booktabs = TRUE) %>%
 **Medaka lines **
 ```{r medaka-table}
 medaka <- data.frame(
-  Genotype = c("iCAB", "CPD KO"),
-  Discription = c("wildtype", "CPD knock out")
+  Genotype = c("iCab", "CPD KO"),
+  Description = c("wildtype", "CPD knock out")
 )
 
 kable(medaka, booktabs = TRUE) %>%
@@ -124,7 +134,7 @@ kable(medaka, booktabs = TRUE) %>%
 cells <- data.frame(
   Genotype = c("3T3"),
   Origin = c("Mouse"),
-  Discription = c("wild type"),
+  Description = c("wild type"),
   Passage = c("45")
 )
 
